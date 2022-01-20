@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/style.css?version=1.0.2">
+    <link rel="shortcut icon" href="./static/img/favicon.ico" type="image/x-icon">
+    <title>Home - DeMath CNPI</title>
+</head>
+
+<body>
+    <header>
+        <img src="./static/img/banner.jpg" alt="Banner" class="banner">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Subjects</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <div>
+            <button id="prev" class="btn">Previous</button>
+            <button id="next" class="btn">Next</button>
+            <br>
+            <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+        </div>
+        <span hidden id="pdf_list"></span>
+        <canvas id="the-canvas"></canvas>
+    </main>
+
+    <footer>
+        <marquee>
+            Copyrights collected by Md. Almas Ali © 2022
+        </marquee>
+    </footer>
+    <script>
+        let q = window.location.search.slice(1);
+        let v = document.getElementById("pdf_list");
+        v.innerText = q;
+    </script>
+    <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="./static/js/pdf_render.js"></script>
+</body>
+
+</html>
